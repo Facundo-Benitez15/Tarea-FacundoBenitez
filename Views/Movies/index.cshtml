@@ -1,0 +1,16 @@
+@model List<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1>Peliculas:</h1>
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li><a asp-action="Detail" asp-route-id="@item.Name">@item.Name</a></li>
+        //<li>@item.Name</li>
+    }
+
+</ul>
